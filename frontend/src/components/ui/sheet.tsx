@@ -64,9 +64,9 @@ function SheetContent({
             data-slot="sheet-close"
             render={
               <Button
-                variant="ghost"
+                variant="default"
                 className="absolute top-3 right-3"
-                size="icon-sm"
+                size="default"
               />
             }
           >
