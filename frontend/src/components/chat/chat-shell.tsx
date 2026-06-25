@@ -101,7 +101,7 @@ export function ChatShell({
                         <SidebarMenuButton
                           isActive={channel.active}
                           tooltip={channel.label}
-                          className="rounded-xl"
+                          className="rounded-[3px] data-active:bg-primary/10 data-active:border-l-2 data-active:border-l-primary data-active:text-primary hover:data-active:bg-primary/90"
                         >
                           <Icon className="size-4" />
                           <span>{channel.label}</span>
