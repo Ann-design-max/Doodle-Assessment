@@ -28,8 +28,8 @@ const validateBody = <T>(schema: z.ZodSchema<T>) => {
 const validateQuery = <T>(schema: z.ZodSchema<T>) => {
   return (req: Request, _res: Response, next: NextFunction) => {
     try {
-      // @ts-expect-error - already validated via zod
-      req.query = schema.parse(req.query);
+      const parsedQuery = schema.parse(req.query);
+      req.query = parsedQuery as unknown as Request['query'];
       next();
     } catch (error) {
       if (error instanceof z.ZodError) {
