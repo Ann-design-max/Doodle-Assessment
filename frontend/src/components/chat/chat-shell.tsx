@@ -23,7 +23,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
   SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
@@ -67,9 +66,7 @@ export function ChatShell({
 }: ChatShellProps) {
   const { open } = useSidebar();
   return (
-    
-    <SidebarProvider defaultOpen>
-      <div className="flex min-h-screen w-full bg-accent/40">
+    <div className="flex min-h-screen w-full bg-accent/40">
         {/* SIDEBAR */}
         <Sidebar
           collapsible="icon"
@@ -178,6 +175,5 @@ export function ChatShell({
             />
         </SidebarInset>
       </div>
-    </SidebarProvider>
   );
 }
